@@ -1,0 +1,15 @@
+{
+  "name": "magentotest",
+  "version": "1.0.0",
+  "description": "This test creates simple product on Magento admin page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "execute-test": "node magentoTest.js"
+  },
+  "author": "Lilit Sargsyan",
+  "license": "ISC",
+  "devDependencies": {
+    "selenium-webdriver": "3.5.0"
+  }
+}
