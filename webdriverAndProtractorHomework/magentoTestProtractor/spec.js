@@ -18,10 +18,14 @@ describe('magento', function() {
     const productInGrid = element(by.xpath("//td/div[contains(text(),'simple_product')]"));
     
     async function login(userNameParam, passwordParam) {
-      await browser.get('http://magento.loc/admin/login');
-      await userName.sendKeys(userNameParam);
-      await password.sendKeys(passwordParam);
-      return signIn.click();
+        await browser.get("http://magento.loc/admin/admin/dashboard/")
+        const url = await browser.getCurrentUrl();
+        if (url != 'http://magento.loc/admin/admin/dashboard/') {
+            await browser.get('http://magento.loc/admin/login');
+            await userName.sendKeys(userNameParam);
+            await password.sendKeys(passwordParam);
+            return signIn.click();     
+        }
     }
     
     async function createSimpleProduct(prodName, prodPrice){
@@ -42,7 +46,7 @@ describe('magento', function() {
         return signOut.click();
     }
 
-    beforeEach(function() {
+    beforeEach(async function() {
         return browser.ignoreSynchronization=true;
     });
     
