@@ -1,0 +1,17 @@
+{
+    "name": "magento.1_protractor",
+    "version": "1.0.0",
+    "main": "spec.js",
+    "dependencies": {
+        "protractor": "5.4.2"
+    },
+    "scripts": {
+        "postinstall": "webdriver-manager update --versions.standalone=3.4.0",
+        "prestart-webdriver": "webdriver-manager update",
+        "start-webdriver": "webdriver-manager start",
+        "test": "protractor conf.js"
+    },
+    "author": "Lilit Sargsyan",
+    "license": "ISC",
+    "description": "This test creates simple product on Magento admin page"
+}
