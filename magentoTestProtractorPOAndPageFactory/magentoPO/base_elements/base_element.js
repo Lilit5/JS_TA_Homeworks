@@ -12,7 +12,6 @@ class Element {
         }    
     }
     click() {
-        console.log("this in base_element " + typeof this);
         return this.elem.click();
     };
     sendKeys(keysToSend) {

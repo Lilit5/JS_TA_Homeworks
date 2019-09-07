@@ -1,7 +1,6 @@
 // conf.js
 exports.config = {
-    // seleniumAddress: 'http://localhost:4444/wd/hub',
-    directConnect: true,
+    seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['./*spec.js'],
     capabilities: {'browserName': 'chrome'},
     getPageTimeout: 10000

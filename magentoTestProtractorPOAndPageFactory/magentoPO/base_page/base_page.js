@@ -12,7 +12,7 @@ class BasePage {
         return browser.sleep(waitInMilliseconds);
     };
     waitForElementVisible(selector, miliseconds) {
-        return browser.wait(EC.visibilityOf(selector), miliseconds);
+        return browser.wait(EC.visibilityOf(selector.elem), miliseconds);
     }
     getCurrentUrl() {
         return browser.getCurrentUrl();
@@ -20,7 +20,10 @@ class BasePage {
     open(url) {
         return browser.get(url);
     };
-
+    async logOut(){
+        await this.loggedInUserName.click();
+        return this.signOut.click();
+    }
 };
 
 module.exports = BasePage;

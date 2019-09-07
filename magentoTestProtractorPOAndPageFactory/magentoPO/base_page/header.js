@@ -6,7 +6,6 @@ class Header {
         this.productsButton = new Element("xpath", "//li[@data-ui-id='menu-magento-catalog-inventory']//span[contains(text(),'Products')]//..");
     };
     async openProductsPage() {
-        console.log("this in header " + typeof this);
         await this.catalogButton.click();
         return this.productsButton.click();
     };
